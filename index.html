@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Corner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sciprt.js" </head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+            <h2 class="logo">☕ Coffee Corner</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Coffee Menu</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#delivery">Delivery</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="cart-button">
+                Cart (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <p class="subtitle">FRESHLY BREWED EVERY DAY</p>
+            <h1>Start Your Day<br>With Great Coffee</h1>
+            <p>Good coffee, good mood, good moments.</p>
+            <a href="#menu" class="main-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- FOOD MENU -->
+    <section id="food" class="menu-section">
+        <h2>Fresh Food & Snacks</h2>
+        <p class="section-description">
+            The perfect treats to enjoy with your coffee.
+        </p>
+
+        <div class="coffee-container">
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600" alt="Fresh croissant">
+                <h3>Butter Croissant</h3>
+                <p>Fresh and buttery pastry.</p>
+                <div class="product-bottom">
+                    <span>$4.00</span>
+                    <button class="add-button" data-name="Butter Croissant" data-price="2">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Chocolate cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich chocolate sweetness.</p>
+                <div class="product-bottom">
+                    <span>$4.00</span>
+                    <button class="add-button" data-name="Chocolate Cake" data-price="4">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600" alt="Cookies">
+                <h3>Chocolate Cookies</h3>
+                <p>A sweet little treat.</p>
+                <div class="product-bottom">
+                    <span>$5.50</span>
+                    <button class="add-button" data-name="Chocolate Cookies" data-price="1.5">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIAL OFFERS -->
+    <section id="offers" class="about-section">
+        <h2>🎉 Special Offers</h2>
+        <p>Breakfast Combo: Coffee + Croissant for $5.00!</p>
+        <p>Weekend Treat: Buy 2 coffees and enjoy a special deal.</p>
+        <a href="#menu" class="main-button">Shop Now</a>
+    </section>
+
+    <!-- DELIVERY SERVICE -->
+    <section id="delivery" class="menu-section">
+        <h2>🚚 Coffee Delivered to Your Door</h2>
+        <p class="section-description">
+            Choose your delivery details below.
+        </p>
+
+        <form id="delivery-form" class="delivery-form">
+            <label for="customer-name">Your Name</label>
+            <input type="text" id="customer-name" placeholder="Enter your name" required>
+
+            <label for="customer-phone">Phone Number</label>
+            <input type="tel" id="customer-phone" placeholder="Enter your phone number" required>
+
+            <label for="customer-address">Delivery Address</label>
+            <textarea id="customer-address" placeholder="Street, building, apartment" required></textarea>
+
+            <label for="delivery-method">Delivery Method</label>
+            <select id="delivery-method">
+                <option value="2">Standard Delivery — $3.00</option>
+                <option value="5">Express Delivery — $10.00</option>
+                <option value="0">Pickup — Free</option>
+            </select>
+
+            <button type="submit" class="main-button">
+                Calculate Order Total
+            </button>
+
+            <p id="delivery-result" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about" class="about-section">
+        <h2>About Coffee Corner</h2>
+        <p>
+            We love serving freshly prepared coffee and delicious snacks.
+            Our goal is to make every coffee break special.
+        </p>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section id="reviews" class="menu-section">
+        <h2>What Our Customers Say</h2>
+
+        <div class="coffee-container">
+            <div class="coffee-card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Delicious coffee and a lovely atmosphere!"</p>
+                <strong>— Alex</strong>
+            </div>
+
+            <div class="coffee-card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"The cappuccino is my favorite."</p>
+                <strong>— Sarah</strong>
+            </div>
+
+            <div class="coffee-card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Great snacks for my morning coffee."</p>
+                <strong>— Daniel</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="about-section">
+        <h2>Contact Us</h2>
+        <p>Email: hello@coffeecorner.example</p>
+        <p>Phone: +998 99 777 77 77 </p>
+        <p>Opening Hours: Monday–Sunday, 8:00 AM–9:00 PM</p>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Our Popular Coffee</h2>
+        <p class="section-description">
+            Discover your favorite cup.
+        </p>
+
+        <div class="coffee-container">
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Iced coffee">
+                <h3>Iced Coffee</h3>
+                <p>Refreshing and smooth.</p>
+                <div class="product-bottom">
+                    <span>$3.00</span>
+                    <button class="add-button" data-name="Iced Coffee" data-price="3">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600" alt="Hot coffee">
+                <h3>Classic Coffee</h3>
+                <p>Rich and aromatic.</p>
+                <div class="product-bottom">
+                    <span>$2.50</span>
+                    <button class="add-button" data-name="Classic Coffee" data-price="2.5">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=600" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Creamy with a soft foam.</p>
+                <div class="product-bottom">
+                    <span>$3.50</span>
+                    <button class="add-button" data-name="Cappuccino" data-price="3.5">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Coffee Corner</h2>
+        <p>
+            We believe every cup of coffee brings people together.
+            Visit us for fresh coffee and a cozy atmosphere.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Coffee Corner. Made by Bakhrom Rakhmonbekov </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
